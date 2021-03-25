@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    background-color: #d7d9e1;
+    color: #212121;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+/* index.html */
+.main {
+    background-color: #fff;
+    max-width: 1140px;
+    margin: auto;
+    border-radius: 16px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+}
+
+table, th, td {
+    border: solid 1px #CED0D4;
+    cursor: default;
+}
+
+tr {
+    transition: all 0.4s linear;
+}
+
+tr:hover {
+    background-color: #f4f6fa;
+}
+
+tr:first-child:hover {
+    background-color: #fff;
+}
+
+.table__name {
+    padding: 0 40px;
+}
+
+.table__date {
+    padding: 0 10px;
+}
+
+.table__email {
+    padding: 0 125px;
+}
+
+.table__phone {
+    padding: 0 12px;
+}
+
+.table__options {
+    padding: 0 10px;
+}
+
+td {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.input p {
+    margin-right: 20px;
+}
+
+.input input {
+    width: 400px;
+}
+

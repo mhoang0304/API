@@ -38,14 +38,12 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./main.js">
     <script>
-        const API = "https://mhoang.herokuapp.com/"
-        const USER_API = API + "users"
-
         $(document).ready(function () {
+            const API = "https://mhoang.herokuapp.com/"
+            const USER_API = API + "users"
             let str = location.href.split("?")[1]
 
             $.get(USER_API + "/" + str).done(function (data) {
-
                 $("#name").val(data.name);
                 $("#year").val(data.birthday);
                 $("#email").val(data.email);
@@ -53,16 +51,11 @@
             })
 
             $("#save").click(function () {
-                let name = $("#name").val()
-                let year = $("#year").val()
-                let email = $("#email").val()
-                let phone = $("#phone").val()
-
                 let data = {
-                    "name": name,
-                    "birthday": year,
-                    "email": email,
-                    "phone": phone
+                    "name": $("#name").val(),
+                    "birthday": $("#year").val(),
+                    "email": $("#email").val(),
+                    "phone": $("#phone").val()
                 }
 
                 $.ajax({
@@ -76,6 +69,7 @@
                     alert("Nhập lại thông tin");
                 })
             })
+            
         })
     </script>
 </body>

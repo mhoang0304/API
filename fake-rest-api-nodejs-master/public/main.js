@@ -25,8 +25,6 @@ $(document).ready(function () {
                         </td>
                     </tr>`)
                 }
-
-              
             }
         };
         xhttp.open("GET", USER_API, true);
@@ -35,19 +33,12 @@ $(document).ready(function () {
 
     loadDoc();
 
-    
-
     $("#save").click(function () {
-        let name = $("#name").val()
-        let year = $("#year").val()
-        let email = $("#email").val()
-        let phone = $("#phone").val()
-
         let data = {
-            "name": name,
-            "birthday": year,
-            "email": email,
-            "phone": phone
+            "name": $("#name").val(),
+            "birthday": $("#year").val(),
+            "email": $("#email").val(),
+            "phone": $("#phone").val()
         }
 
         $.ajax({
@@ -70,7 +61,7 @@ function deleteValue(id) {
     $.ajax({
         type: "DELETE",
         url: USER_API + "/" + id
-    }).done(function() {
+    }).done(function () {
         //SAu khi xoas xong 
 
     })

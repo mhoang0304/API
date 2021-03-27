@@ -1,0 +1,23 @@
+body {
+    background-color: #d7d9e1;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0 10px;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 16px;
+    overflow: hidden;
+    thead {
+        background-color: #36304a;
+        color: #fff;
+        tr {
+            height: 30px;
+        }
+    }
+}

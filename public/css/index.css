@@ -1,25 +1,91 @@
 body {
-  background-color: #d7d9e1;
+  background-color: #bbbdb3;
 }
 
 h1 {
   text-align: center;
-  padding: 20px 0 10px;
+  padding: 30px 0 20px;
+}
+
+.button-add {
+  display: flex;
+  justify-content: flex-end;
+}
+.button-add button {
+  border: none;
+  color: white;
+  border-radius: 8px;
+  background-color: #28a745;
+  transition: all 0.2s ease-in;
+  width: 148px;
+  height: 42px;
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+}
+.button-add button:hover {
+  background-color: #00a550;
+  cursor: pointer;
+}
+.button-add button a {
+  color: white;
 }
 
 table {
   border-collapse: collapse;
   background-color: #fff;
   margin: auto;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
+  width: 100%;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
 }
 table thead {
-  background-color: #36304a;
+  background-color: #212121;
   color: #fff;
+  font-size: 1.8rem;
 }
 table thead tr {
-  height: 30px;
+  height: 50px;
+}
+table thead tr th {
+  font-weight: normal;
+  text-align: left;
+}
+table thead tr .table-name {
+  padding-left: 14px;
+}
+table tbody {
+  color: #525252;
+}
+table tbody tr {
+  height: 48px;
+}
+table tbody tr td:first-child {
+  padding-left: 14px;
+}
+table tbody tr button {
+  border: none;
+  background-color: #fff;
+  font-size: 1.6rem;
+}
+table tbody tr button i {
+  color: #495057;
+  cursor: pointer;
+}
+table tbody tr button:last-child {
+  margin-left: 6px;
+}
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table tbody tr:hover {
+  color: black;
+  background-color: #ddd;
+  transition: all 0.2s ease-in-out;
+}
+table tbody tr:hover a, table tbody tr:hover i {
+  background-color: #ddd;
+  transition: all 0.2s ease-in-out;
 }
 
 /*# sourceMappingURL=index.css.map */

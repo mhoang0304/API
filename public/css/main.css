@@ -13,4 +13,13 @@ body {
   font-size: 1.6rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -9,30 +9,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <h1>Thêm mới học viên</h1>
-    <div class="container">
-        <div class="input">
+    <div class="container create">
+        <h1>Thêm mới học viên</h1>
+        <div class="create-input">
             <p>Họ Tên</p>
             <input id="name" type="text">
         </div>
-        <div class="input">
+        <div class="create-input">
             <p>Năm sinh</p>
             <input id="year" type="text">
         </div>
-        <div class="input">
+        <div class="create-input">
             <p>Email</p>
             <input id="email" type="text">
         </div>
-        <div class="input">
-            <p>Phone</p>
+        <div class="create-input">
+            <p>Điện thoại</p>
             <input id="phone" type="text">
         </div>
+        <div class="group-btn">
+            <button><a href="./index.html">Quay lại</a></button>
+            <button id="save">Lưu</button>
+        </div>
     </div>
-    <button><a href="./index.html">Quay lại</a></button>
-    <button id="save">Lưu</button>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

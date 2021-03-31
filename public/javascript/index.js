@@ -19,25 +19,35 @@ $(document).ready(function () {
                                 <button>
                                     <a href="./edit.html?${user[i].id}"><i class="fas fa-edit"></i></a>
                                 </button>
-                                <button onclick='deleteValue(${user[i].id})' class="delete"><i class="fas fa-trash"></i></button>
+                                <button data-id="${user[i].id}" class="delete"><i class="fas fa-trash"></i></button>
                             </td>
                         </tr>`)
                 }
+
+                $(".delete").click(function () {
+                    let id = $(this).attr("data-id");
+                    let element = $(this);
+
+                    $(".confirm").css("display", "block");
+
+                    $("#no-confirm").click(function () {
+                        $(".confirm").css("display", "none");
+                    });
+
+                    $("#confirm").click(function () {
+                        $(".confirm").css("display", "none");
+                        $.ajax({
+                            type: "DELETE",
+                            url: USER_API + "/" + id
+                        }).done(function () {
+                            element.parent().parent().remove();
+                        })
+                    });
+                })
+
             }
         };
         request.send();
     }
     loadDoc();
 })
-
-function deleteValue(id) {
-    $.ajax({
-        type: "DELETE",
-        url: USER_API + "/" + id
-    }).done(function () {
-        console.log($(this));
-        console.log("1");
-        console.log($(this).parent("tr"));
-        $(this).parent("tr")
-    })
-};
